@@ -36,14 +36,14 @@ pipeline {
                         sonar.sources=src/main
                         sonar.sourceEncoding=UTF-8
                         sonar.language=java
-                        
-                        sonar.tests=src/test
-                        sonar.junit.reportsPath=target/surefire-reports
-                        sonar.surefire.reportsPath=target/surefire-reports
-                        sonar.jacoco.reportPath=target/jacoco.exec
-                        
                         sonar.java.binaries=target/classes
                         sonar.java.coveragePlugin=jacoco
+
+                        // Optional properties if the paths exist
+                        //sonar.tests=src/test
+                        //sonar.junit.reportsPath=target/surefire-reports
+                        //sonar.surefire.reportsPath=target/surefire-reports
+                        //sonar.jacoco.reportPath=target/jacoco.exec
                     """
 
                     // Create sonar-project.properties file
